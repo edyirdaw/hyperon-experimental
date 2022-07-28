@@ -1,19 +1,12 @@
-; (: a A)
-
-;;;;;;;;;;;;;
 
 (e a)
 
-! (match &self (e $x) $x )
+! (match &self ($x (: a A) ) $x )
 
-;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
 
-(e $y)
+(: b B)
 
-! (match &self (e $z) $z )
+(e b)
 
-
-;; Ouputs
-;; [a]
-;; [a, $y-4]
-;; What is the -4 output
+! (match &self ($x (:b B) ) $x )
