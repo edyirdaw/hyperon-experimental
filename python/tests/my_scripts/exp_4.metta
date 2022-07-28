@@ -36,6 +36,24 @@
 
 ! (match &self ($x d1 ) $x )
 
+;;;;;;;;;;;;;; Doesnt work
+
+(: aa AA)
+
+(ee aa)
+
+!(match &self (ee (: aa $t)) $t )
+
+
+;;;;;;;;;;;;;; Doesnt work
+
+(ee aa)
+
+!(match &self (ee (: aa $t)) $t )
+
 ;;;;;;;;;;;;;;
+
+
+
 
 
