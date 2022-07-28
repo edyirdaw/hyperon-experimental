@@ -14,8 +14,8 @@
 
 ;; Ouputs
 ;; [a]
-;; [a, $y-4]
-;; What is the -4 output
+;; [a, $y-2]
+;; What is the -2 output
 
 ;;;;;;;;;;;;;
 
