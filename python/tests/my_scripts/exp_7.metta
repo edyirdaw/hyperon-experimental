@@ -19,3 +19,11 @@
 ! (match &self (= (double $y) 4) $y)
 ! (match &self (= (double $y) $z) $y)
 ;End The first one doesnt match but the second does.
+
+;A doesnt get matched, as described in the spec doc
+;This is from prev section
+(: a A)
+(e a)
+! (match &self (e (: a $t)) $t)
+! (match &self (e $t) $t)
+;End A doesnt get matched, as described in the spec doc
