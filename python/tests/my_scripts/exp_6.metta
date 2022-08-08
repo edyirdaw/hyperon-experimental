@@ -15,9 +15,10 @@
 
 ! (match &self ($z $w) $z )
 
-; More than one varible is not printed
-! (match &self ($z $w) $z $w )
-; End More than one varible is not printed
+; Here is how to print more than one varible. Just enclose them with braces.
+!(Here)
+! (match &self ($z $w) ($z $w) )
+; End Here is how to print more than one varible. Just enclose them with braces.
 
 ! (match &self ($z) $z )
 ! (match &self (= 8 $z) $z )
