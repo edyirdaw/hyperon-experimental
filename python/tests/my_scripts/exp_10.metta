@@ -8,7 +8,7 @@
 (: And (-> Type Type Type))
 (= (And (TV $p1) (TV $p2)) (TV (* $p1 $p2)))
 
-(= (And (Human Socrates) (Human Sam)) $tv)
+; (= (And (Human Socrates) (Human Sam)) $tv)
 
 ;This one works
 ! (match &self (= (And (TV 0.9) (TV 0.7)) ($tv $tv_n) ) $tv_n)
@@ -16,7 +16,8 @@
 ;This one doesn't work as far as printing the result
 ! (match &self (= (And (TV 0.9) (TV 0.7)) ($tv $tv_n) ) ($tv $tv_n))
 
-;This doesnt work as well. May be it needs further queries? Dont think so.
+;This doesnt work as well. May be it needs further equality queries.
+;Arguments of the And expression are not being substituted.
 ! (match &self (= (And (Human Socrates) (Human Sam)) ($tv $tv_n) ) $tv_n)
 
 
