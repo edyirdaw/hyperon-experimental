@@ -67,7 +67,18 @@ f
 
 ;;;;;;;;;;
 
-(= (= (bin) 0) True)(= (= (bin) 1) True)
+
+(= (= (bin) 0) (TV 0.5))
+(= (= (bin) 1) (TV 0.5))
 (= (And True True) True)
 (= (= $a $b) (And (= $c $a) (= $c $b)))
-!(= 0 1)
+(= 0 1)
+
+;;;;;;;;;;;;
+
+(= (gen Nil) Nil)
+(= (gen (Cons $h $t))
+(Cons (bin) (gen $t)))
+
+!(smult Nil Nil)
+
