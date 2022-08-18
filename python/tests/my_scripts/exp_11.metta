@@ -52,3 +52,10 @@ f
 !(match &self (($x $y) f) $x)
 !(d e)
 
+! --transform_example-- ; nice demarcator print out hack
+
+(r1 r2)
+!(match &self (r1 $x1) $x1)
+;; The below code shows that transform is not implemented yet.
+;; Instead, match can easily do the task as can be seen from the example above.
+!(transform &self (r1 $x1) $x1)
