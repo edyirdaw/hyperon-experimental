@@ -76,9 +76,12 @@ f
 
 ;;;;;;;;;;;;
 
+;This example needs definition of Cons. You can try it by definign Cons.
+(= (bin) 0)
+(= (bin) 1)
 (= (gen Nil) Nil)
 (= (gen (Cons $h $t))
 (Cons (bin) (gen $t)))
 
-!(smult Nil Nil)
+;;;;;;;;;;
 
