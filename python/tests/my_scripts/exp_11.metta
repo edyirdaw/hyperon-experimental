@@ -6,13 +6,18 @@
 ; Prints [5]
 (= f 5)
 (= (g) p)
+(= (g) q)
+(= q1 (g1))
+(= 4 (g1))
 (= h (a))
 !(match &self (= f $t) $t)
 !(f)
 ! -g-
 !(g) ; Value of (g) is printed without using match. But you need to put it
 ;inside braces in the definition it has in the equlaity expression it appears in.
-
+! --g1--
+!(g1)
+!(q1)
 ;; (= f $r)
 ! f
 f
@@ -59,3 +64,10 @@ f
 ;; The below code shows that transform is not implemented yet.
 ;; Instead, match can easily do the task as can be seen from the example above.
 !(transform &self (r1 $x1) $x1)
+
+;;;;;;;;;;
+
+(= (= (bin) 0) True)(= (= (bin) 1) True)
+(= (And True True) True)
+(= (= $a $b) (And (= $c $a) (= $c $b)))
+!(= 0 1)
